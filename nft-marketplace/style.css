@@ -760,3 +760,7 @@ body {
     }
 
 }
+.details-btn {
+    text-decoration: none;
+    display: inline-block;
+}

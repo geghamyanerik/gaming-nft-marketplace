@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Epic Sword | GameVault</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            GAME<span>VAULT</span>
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="index.html">
+                Marketplace
+            </a>
+
+            <a href="#">
+                Inventory
+            </a>
+
+            <a href="#">
+                Studio
+            </a>
+
+        </nav>
+
+        <button class="wallet-btn" id="connectWallet">
+            Connect Wallet
+        </button>
+
+    </header>
+
+
+    <!-- ITEM DETAILS -->
+
+    <main class="item-page">
+
+        <!-- BACK -->
+
+        <a href="index.html" class="back-link">
+            ← Back to Marketplace
+        </a>
+
+
+        <div class="item-container">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="item-preview">
+
+                <div class="big-sword">
+                    ⚔️
+                </div>
+
+                <div class="preview-label">
+                    2D PREVIEW
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="item-details">
+
+
+                <div class="item-top">
+
+                    <span class="rarity epic">
+                        EPIC
+                    </span>
+
+                    <span class="status">
+                        ● ON SALE
+                    </span>
+
+                </div>
+
+
+                <h1>
+                    Epic Sword
+                </h1>
+
+
+                <p class="item-description">
+
+                    A powerful legendary sword designed for
+                    high-level warriors. This unique in-game
+                    asset is represented as an ERC-1155 NFT.
+
+                </p>
+
+
+                <!-- STATS -->
+
+                <div class="item-stats">
+
+                    <div class="item-stat">
+
+                        <span>
+                            Damage
+                        </span>
+
+                        <strong>
+                            95
+                        </strong>
+
+                    </div>
+
+
+                    <div class="item-stat">
+
+                        <span>
+                            Defense
+                        </span>
+
+                        <strong>
+                            40
+                        </strong>
+
+                    </div>
+
+
+                    <div class="item-stat">
+
+                        <span>
+                            Level
+                        </span>
+
+                        <strong>
+                            25
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- METADATA -->
+
+                <div class="metadata">
+
+                    <h3>
+                        NFT Metadata
+                    </h3>
+
+
+                    <div class="metadata-row">
+
+                        <span>
+                            Token Standard
+                        </span>
+
+                        <strong>
+                            ERC-1155
+                        </strong>
+
+                    </div>
+
+
+                    <div class="metadata-row">
+
+                        <span>
+                            Token ID
+                        </span>
+
+                        <strong>
+                            #001
+                        </strong>
+
+                    </div>
+
+
+                    <div class="metadata-row">
+
+                        <span>
+                            Collection
+                        </span>
+
+                        <strong>
+                            Battle Legends
+                        </strong>
+
+                    </div>
+
+
+                    <div class="metadata-row">
+
+                        <span>
+                            Supply
+                        </span>
+
+                        <strong>
+                            1 / 100
+                        </strong>
+
+                    </div>
+
+
+                    <div class="metadata-row">
+
+                        <span>
+                            Owner
+                        </span>
+
+                        <strong>
+                            0x7A...92F
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRICE -->
+
+                <div class="purchase-box">
+
+                    <div>
+
+                        <span class="price-label">
+                            Current Price
+                        </span>
+
+                        <strong class="big-price">
+                            200 MOCK-GOLD
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        class="buy-btn"
+                        id="buyButton">
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="sell-btn"
+                    id="sellButton">
+
+                    List for Sale
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- BUY MODAL -->
+
+    <div
+        class="modal"
+        id="buyModal">
+
+        <div class="modal-content">
+
+            <button
+                class="close-btn"
+                id="closeBuyModal">
+
+                ×
+
+            </button>
+
+
+            <h2>
+                Confirm Purchase
+            </h2>
+
+
+            <p>
+                You are about to purchase
+                <strong>Epic Sword</strong>.
+            </p>
+
+
+            <div class="transaction-info">
+
+                <div>
+
+                    <span>
+                        Price
+                    </span>
+
+                    <strong>
+                        200 MOCK-GOLD
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Network Fee
+                    </span>
+
+                    <strong>
+                        0.002 MOCK-ETH
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button class="confirm-btn">
+
+                Confirm Purchase
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- SELL MODAL -->
+
+    <div
+        class="modal"
+        id="sellModal">
+
+        <div class="modal-content">
+
+            <button
+                class="close-btn"
+                id="closeSellModal">
+
+                ×
+
+            </button>
+
+
+            <h2>
+                List Epic Sword
+            </h2>
+
+
+            <p>
+                Set the price for your NFT.
+            </p>
+
+
+            <label>
+                Price
+            </label>
+
+
+            <div class="price-input">
+
+                <input
+                    type="number"
+                    value="200"
+                    id="sellPrice">
+
+                <span>
+                    MOCK-GOLD
+                </span>
+
+            </div>
+
+
+            <label>
+                Duration
+            </label>
+
+
+            <select>
+
+                <option>
+                    7 Days
+                </option>
+
+                <option>
+                    14 Days
+                </option>
+
+                <option>
+                    30 Days
+                </option>
+
+            </select>
+
+
+            <button
+                class="confirm-btn"
+                id="listButton">
+
+                List for Sale
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- WALLET MODAL -->
+
+    <div
+        class="modal"
+        id="walletModal">
+
+        <div class="modal-content">
+
+            <button
+                class="close-btn"
+                id="closeWalletModal">
+
+                ×
+
+            </button>
+
+
+            <h2>
+                Connect Wallet
+            </h2>
+
+
+            <p>
+                Connect your wallet to interact
+                with game assets.
+            </p>
+
+
+            <button class="wallet-option">
+
+                🦊 MetaMask
+
+            </button>
+
+
+            <button class="wallet-option">
+
+                🔗 WalletConnect
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

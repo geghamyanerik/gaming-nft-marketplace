@@ -1,39 +1,186 @@
+/* =========================
+   WALLET
+========================= */
+
 const connectWallet =
     document.getElementById("connectWallet");
 
 const walletModal =
     document.getElementById("walletModal");
 
-const closeModal =
-    document.getElementById("closeModal");
+const closeWalletModal =
+    document.getElementById("closeWalletModal");
 
 
-/* OPEN WALLET */
+if (connectWallet) {
 
-connectWallet.addEventListener("click", function () {
+    connectWallet.addEventListener(
+        "click",
+        function () {
 
-    walletModal.classList.add("show");
+            walletModal.classList.add("show");
 
-});
+        }
+    );
 
-
-/* CLOSE WALLET */
-
-closeModal.addEventListener("click", function () {
-
-    walletModal.classList.remove("show");
-
-});
+}
 
 
-/* CLOSE WHEN CLICKING OUTSIDE */
+if (closeWalletModal) {
 
-walletModal.addEventListener("click", function (event) {
+    closeWalletModal.addEventListener(
+        "click",
+        function () {
 
-    if (event.target === walletModal) {
+            walletModal.classList.remove("show");
 
-        walletModal.classList.remove("show");
+        }
+    );
+
+}
+
+
+/* =========================
+   BUY
+========================= */
+
+const buyButton =
+    document.getElementById("buyButton");
+
+const buyModal =
+    document.getElementById("buyModal");
+
+const closeBuyModal =
+    document.getElementById("closeBuyModal");
+
+
+if (buyButton) {
+
+    buyButton.addEventListener(
+        "click",
+        function () {
+
+            buyModal.classList.add("show");
+
+        }
+    );
+
+}
+
+
+if (closeBuyModal) {
+
+    closeBuyModal.addEventListener(
+        "click",
+        function () {
+
+            buyModal.classList.remove("show");
+
+        }
+    );
+
+}
+
+
+/* =========================
+   SELL
+========================= */
+
+const sellButton =
+    document.getElementById("sellButton");
+
+const sellModal =
+    document.getElementById("sellModal");
+
+const closeSellModal =
+    document.getElementById("closeSellModal");
+
+
+if (sellButton) {
+
+    sellButton.addEventListener(
+        "click",
+        function () {
+
+            sellModal.classList.add("show");
+
+        }
+    );
+
+}
+
+
+if (closeSellModal) {
+
+    closeSellModal.addEventListener(
+        "click",
+        function () {
+
+            sellModal.classList.remove("show");
+
+        }
+    );
+
+}
+
+
+/* =========================
+   LIST FOR SALE
+========================= */
+
+const listButton =
+    document.getElementById("listButton");
+
+
+if (listButton) {
+
+    listButton.addEventListener(
+        "click",
+        function () {
+
+            alert(
+                "Approve Marketplace to handle your NFT"
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================
+   CLOSE MODALS
+========================= */
+
+window.addEventListener(
+    "click",
+    function (event) {
+
+        if (
+            event.target === buyModal
+        ) {
+
+            buyModal.classList.remove("show");
+
+        }
+
+
+        if (
+            event.target === sellModal
+        ) {
+
+            sellModal.classList.remove("show");
+
+        }
+
+
+        if (
+            event.target === walletModal
+        ) {
+
+            walletModal.classList.remove("show");
+
+        }
 
     }
-
-});
+);
